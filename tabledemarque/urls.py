@@ -21,5 +21,6 @@ urlpatterns = [
     url(r'^$', 'compteur.views.index', name='home'),
     url(r'^about/$', TemplateView.as_view(template_name='about.html'), name='about'),
     url(r'^contact/$', TemplateView.as_view(template_name='contact.html'), name='contact'),
+    url(r'^jeux/(?P<slug>[-\w]+)/$', 'compteur.views.jeu_detail', name='jeu_detail'),
     url(r'^admin/', include(admin.site.urls)),
 ]

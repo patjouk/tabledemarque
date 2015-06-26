@@ -5,8 +5,8 @@
 {% block title %}Page d'accueil - {{  block.super }}{% endblock %}
 {% block content %}
    {%  for jeu in jeux %}
-    <h2>{{ jeu.name }}</h2>
-    <p>{{ jeu.description }}</p>
+    <h2><a href="{%  url 'jeu_detail' slug=jeu.slug %}">{{ jeu.name }}</a></h2>
+       <p>{{ jeu.description }}</p>
     {% endfor %}
 {% endblock %}
 </html>
