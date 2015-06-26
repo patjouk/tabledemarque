@@ -1,5 +1,6 @@
 {% extends 'layouts/base.html' %}
 {%  load staticfiles %}
+{% load humanize %}
 
 <!doctype html>
 <html>
@@ -8,6 +9,6 @@
     <h1>Hello World!</h1>
     <p>Up and running!</p>
     <img src="{% static 'images/star.png' %}" alt="Image of a star" />
-    <p>What did we hide in our "number" variable? {{ number }} of course!</p>
+    <p>Il y a {{ number|apnumber }} chien{{ number|pluralize }} !</p>
 {% endblock %}
 </html>
