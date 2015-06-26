@@ -1,14 +1,12 @@
 {% extends 'layouts/base.html' %}
-{%  load staticfiles %}
-{% load humanize %}
 
 <!doctype html>
 <html>
 {% block title %}Page d'accueil - {{  block.super }}{% endblock %}
 {% block content %}
-    <h1>Hello World!</h1>
-    <p>Up and running!</p>
-    <img src="{% static 'images/star.png' %}" alt="Image of a star" />
-    <p>Il y a {{ number|apnumber }} chien{{ number|pluralize }} !</p>
+   {%  for jeu in jeux %}
+    <h2>{{ jeu.name }}</h2>
+    <p>{{ jeu.description }}</p>
+    {% endfor %}
 {% endblock %}
 </html>

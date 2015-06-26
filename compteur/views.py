@@ -1,10 +1,8 @@
 from django.shortcuts import render
+from compteur.models import Jeu
 
-# Create your views here.
 def index(request):
-    # defining the variable
-    number = 6
-    # passing the variable to the view
+    jeux = Jeu.objects.all()
     return render(request, 'index.html', {
-        'number': number
+        'jeux': jeux,
     })
