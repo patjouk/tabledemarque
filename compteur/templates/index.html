@@ -1,14 +1,12 @@
-{% load staticfiles %}
+{% extends 'layouts/base.html' %}
+{%  load staticfiles %}
 
 <!doctype html>
 <html>
-<head>
-    <title>Table de marque</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
-</head>
-<body>
+{% block title %}Page d'accueil - {{  block.super }}{% endblock %}
+{% block content %}
     <h1>Hello World!</h1>
     <p>Up and running!</p>
-    <img src="{%static 'images/star.png' %}" alt="picture of a star" />
-</body>
+    <img src="{% static 'images/star.png' %}" alt="Image of a star" />
+{% endblock %}
 </html>
